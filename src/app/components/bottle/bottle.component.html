@@ -5,8 +5,13 @@
   </div>
   <div class="container">
     <div class="row" >
-        <p class="counter1" *ngIf="status">
-            {{countdown$ |async}}
+        <p class="counter1" *ngIf="isCountingStart == false">
+            <!-- {{countdown}} -->
+            <!-- {{countdown$ |async}} -->
+        </p>
+        <p class="counter1" *ngIf="isCountingStart">
+            {{countdown}}
+            <!-- {{countdown$ |async}} -->
         </p>
         
     </div>
