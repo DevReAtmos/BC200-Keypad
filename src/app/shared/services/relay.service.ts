@@ -13,12 +13,14 @@ export class RelayService {
   }
 
   turnOnRelay(){
+    console.log("trigger On");
     return this.http.post('http://raspberrypi.local:5000/trigger-crusher', {
       "trigger": "on"
     });
   }
 
   turnOffRelay(){
+    console.log("trigger off");
     return this.http.post('http://raspberrypi.local:5000/trigger-crusher', {
       "trigger": "off"
     });

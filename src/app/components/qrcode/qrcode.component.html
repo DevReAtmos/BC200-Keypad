@@ -1,3 +1,37 @@
-<div class="container">
+
+
+
+
+<!-- <div class="header row">
+    <img src="../assets/images/logo-social.png" class="img_left">
+    <img src="../assets/images/logo.png" class="img_right">
+  </div> -->
+  <div class="container">
+    <div class="row" >
+        
+            <p class="counter1" *ngIf="isCountingStart == false">
+               
+            </p>
+            <p class="counter1" *ngIf="isCountingStart">
+                {{countdown}}
+               
+            </p>
+       
+    </div>
+  <div class="row">
   
-</div>
+    <div class="main col">
+     
+        <qrcode [qrdata]="QRvalue" [width]="300" [errorCorrectionLevel]="'M'" class="qrcode"></qrcode>
+        
+
+    </div>
+  
+  
+    <div class="advertisement col-6" style="height: 100%;">
+      <img src="../../../assets/images/test.gif" alt="">
+    </div>
+  </div>
+  </div>
+  
+

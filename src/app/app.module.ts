@@ -14,6 +14,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { QRCodeModule } from 'angularx-qrcode';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { BinfulComponent } from './components/binful/binful.component';
+
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     PhoneComponent,
     QrcodeComponent,
     ThankYouComponent,
-    HomeComponent
+    HomeComponent,
+    BinfulComponent
   ],
   imports: [
     BrowserModule,

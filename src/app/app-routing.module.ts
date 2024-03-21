@@ -5,6 +5,8 @@ import { PhoneComponent } from './components/phone/phone.component';
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
 import { QrcodeComponent } from './components/qrcode/qrcode.component';
 import { HomeComponent } from './components/home/home.component';
+import { BinfulComponent } from './components/binful/binful.component';
+
 const routes: Routes = [
   {
     path: 'home',
@@ -28,6 +30,10 @@ const routes: Routes = [
   {
     path: 'qrcode',
     component: QrcodeComponent
+  },
+  {
+    path: 'binful',
+    component: BinfulComponent
   }
 ];
 

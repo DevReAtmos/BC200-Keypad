@@ -12,9 +12,26 @@ export class CheckSensorServiceService {
       
   }
 
+  // checkSensor(){
+  //   return this.http.get('http://raspberrypi.local:5000/get-sensor-data');
+    
+  // }
+  // checkSensor(){
+  //   return this.http.get('http://raspberrypi.local:5000/get-sensor-data');
+    
+  // }
   checkSensor(){
     return this.http.get('http://raspberrypi.local:5000/get-sensor-data');
     
   }
+  checkBottle(){
+    return this.http.get('http://raspberrypi.local:5000/get-bottle-count');
+  }
+
+  checkBinful(){
+    return this.http.get('http://raspberrypi.local:5000/get-bin-status');
+  }
+
+
 
 }

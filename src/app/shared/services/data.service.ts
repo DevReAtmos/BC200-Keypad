@@ -16,6 +16,7 @@ export class DataService {
     }
 
   getBottles(){
+    console.log("total bottles are",this.bottles);
     return this.bottles;
   }
 
@@ -24,7 +25,8 @@ export class DataService {
   }
 
   addBottles(){
-    this.bottles+=1;
+    this.bottles += 1;
+    console.log("addBottles function called",this.bottles);
   }
 
   addPhoneNUmber(number:string){

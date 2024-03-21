@@ -17,6 +17,16 @@ export class ControllButtonService {
     return this.http.get('http://raspberrypi.local:5000/get-next-status');
   }
 
+  isCancelpressed() :Observable<any> {
+    console.log("in cancel pressed function");
+    return this.http.get('http://raspberrypi.local:5000/get-cancel-status');
+  }
+
+  isClearpressed():Observable<any> {
+    console.log("in clear pressed function");
+    return this.http.get('http://raspberrypi.local:5000/get-cancel-status');
+  }
+
   // isNextPressed(){
   //     console.log("in next pressed function")
   //     return this.http.get('http://raspberrypi.local:5000/get-next-status')
