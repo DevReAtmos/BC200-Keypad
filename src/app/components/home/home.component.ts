@@ -30,8 +30,8 @@ export class HomeComponent {
     this.phoneService.clearPhoneNumber();
     this.dataService.clearUserData();
 
-    
-    this.subscription = timer(0,200).pipe(
+    // 200
+    this.subscription = timer(0,700).pipe(
       switchMap(()=>this.checkSensorData())
     ).subscribe(
       (result:any)=>{

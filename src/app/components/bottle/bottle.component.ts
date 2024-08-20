@@ -43,7 +43,8 @@ export class BottleComponent {
   ) {
       // this.counterStart();
       this.crushBottle();
-      this.subscription1 = timer(0,100).pipe(
+      // 100
+      this.subscription1 = timer(0,700).pipe(
         switchMap(()=>this.checkSensorData())
       ).subscribe(
         (result:any)=>{
@@ -77,7 +78,7 @@ export class BottleComponent {
       
       );
     
-      this.subscription3 = timer(0,200).pipe(
+      this.subscription3 = timer(0,700).pipe(
         switchMap(()=>this.isBottleDetected())
       ).subscribe(
         (result:any)=>{
