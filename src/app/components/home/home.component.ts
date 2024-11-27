@@ -15,6 +15,7 @@ export class HomeComponent {
   sensorData: any;
   subscription!: Subscription;
   subscription1!: Subscription;
+  subscription2!: Subscription;
   // subscription2!:Subscription;
   binStatus:boolean =false;
 

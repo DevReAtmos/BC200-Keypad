@@ -20,11 +20,11 @@ export class PhoneService {
   // }
   
   getPhoneNumber() {
-    return this.http.get('http://raspberrypi.local:5000/get-phone-number');
+    return this.http.get('http://test2024:5000/get-phone-number');
   }
 
   clearPhoneNumber(): Observable<any> {
-    return this.http.post('http://raspberrypi.local:5000/clear-phone-number',{});
+    return this.http.post('http://test2024:5000/clear-phone-number',{});
   }
 
  

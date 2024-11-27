@@ -142,7 +142,6 @@ export class QrcodeComponent {
   }
 
   timedStartCounter(){
-   
     this.isCountingStart=true;
     this.restartCountdown();
 
@@ -157,6 +156,7 @@ stopCounter(){
   this.isCountingStart =false;
   clearInterval(this.myInterval);
 }
+
 postingdata(){
   this.dataService.getData(this.dataString).subscribe(
     (res)=>{
@@ -168,6 +168,7 @@ postingdata(){
    }
    );
 }
+
 private  clearUserData() {
   console.log("clear user data function called")
   this.dataService.clearUserData();

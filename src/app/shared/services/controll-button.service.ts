@@ -14,17 +14,17 @@ export class ControllButtonService {
   
   isNextPressed(): Observable<any> {
     console.log("in next pressed function");
-    return this.http.get('http://raspberrypi.local:5000/get-next-status');
+    return this.http.get('http://test2024:5000/get-next-status');
   }
 
   isCancelpressed() :Observable<any> {
     console.log("in cancel pressed function");
-    return this.http.get('http://raspberrypi.local:5000/get-cancel-status');
+    return this.http.get('http://test2024:5000/get-cancel-status');
   }
 
   isClearpressed():Observable<any> {
     console.log("in clear pressed function");
-    return this.http.get('http://raspberrypi.local:5000/get-cancel-status');
+    return this.http.get('http://test2024:5000/get-cancel-status');
   }
 
   // isNextPressed(){

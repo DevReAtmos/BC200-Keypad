@@ -15,6 +15,8 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { BinfulComponent } from './components/binful/binful.component';
+import { PasswordComponent } from './components/password/password.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 
@@ -26,7 +28,9 @@ import { BinfulComponent } from './components/binful/binful.component';
     QrcodeComponent,
     ThankYouComponent,
     HomeComponent,
-    BinfulComponent
+    BinfulComponent,
+    PasswordComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

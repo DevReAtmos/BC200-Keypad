@@ -21,15 +21,15 @@ export class CheckSensorServiceService {
     
   // }
   checkSensor(){
-    return this.http.get('http://raspberrypi.local:5000/get-sensor-data');
+    return this.http.get('http://test2024:5000/get-sensor-data');
     
   }
   checkBottle(){
-    return this.http.get('http://raspberrypi.local:5000/get-bottle-count');
+    return this.http.get('http://test2024:5000/get-bottle-count');
   }
 
   checkBinful(){
-    return this.http.get('http://raspberrypi.local:5000/get-bin-status');
+    return this.http.get('http://test2024:5000/get-bin-status');
   }
 
 

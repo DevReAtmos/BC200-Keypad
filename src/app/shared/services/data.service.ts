@@ -39,7 +39,7 @@ export class DataService {
   }
    
   getData(data :any):Observable<any> {
-    return this.http.post('http://raspberrypi.local:5000/offline-data',data);
+    return this.http.post('http://test2024:5000/offline-data',data);
   }
 
 }

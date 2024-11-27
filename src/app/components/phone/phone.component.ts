@@ -14,6 +14,11 @@ export class PhoneComponent {
 
   phoneNumber:string = "123-456-7890";
   errorMessage: string =""
+  dataString: string = '';
+  currentDate = new Date();
+  date =this.currentDate.toISOString().split('T')[0];
+  bottle_count =0;
+  location ="Ahmedabad";
   subscription1: Subscription;
   subscription2: Subscription;
   subscription3: Subscription;
@@ -55,7 +60,8 @@ export class PhoneComponent {
               console.log("Valid phone no!");
               this.dataService.addPhoneNUmber(this.phoneNumber);
               console.log("Phone no saved");
-              this.router.navigateByUrl('qrcode');
+              this.postingdata();
+              this.router.navigateByUrl('thank');
               console.log("routing in thank win");
               this.subscription2.unsubscribe();
             }
@@ -78,6 +84,7 @@ export class PhoneComponent {
               // console.log("Valid phone no!");
               // this.dataService.addBottles();
               // console.log("Phone no saved");
+              this.postingdata();
               this.router.navigateByUrl('home');
               console.log("routing in home win");
               this.subscription3.unsubscribe();
@@ -130,7 +137,8 @@ export class PhoneComponent {
   
   saveDataAndGotoQrcode(){
     this.dataService.addPhoneNUmber(this.phoneNumber);
-    this.router.navigateByUrl('qrcode');
+    this.postingdata();
+    this.router.navigateByUrl('thank');
   }
 
 
@@ -166,6 +174,18 @@ export class PhoneComponent {
 
 }
 
+postingdata(){
+  this.dataService.getData(this.dataString).subscribe(
+    (res)=>{
+       console.log('Data saved suceessfully:',res);
+
+    },
+   (error) => {
+    console.error('Error saving data:', error);
+   }
+   );
+}
+
 restartCountdown(){
   this.countdown =60;
   this.isCountingStart = true;
@@ -184,3 +204,4 @@ stopCounter(){
     
   }
 }
+
