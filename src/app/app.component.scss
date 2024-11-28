@@ -1,0 +1,44 @@
+.header{
+  width: 100%;
+  padding: auto;
+}
+
+.img_right {
+  display: block;
+  margin-left: auto;
+  width: 250px;
+}
+
+.img_left{
+  display: block;
+  margin-right: auto;
+  
+  width: 250px; 
+}
+
+.advertisement{
+  background-color: #D9D9D9;
+  margin-left: 40px;
+  
+}
+
+.main{
+
+  max-width: 40% ;
+  height: 554px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+
+.counter{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  width: fit-content;
+  margin-left : auto;
+}
