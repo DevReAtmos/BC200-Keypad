@@ -1,2 +1,21 @@
+# Node.js dependencies
 node_modules/
+
+# Angular build output
 dist/
+
+# IDE or editor settings
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Environment files
+*.env
+*.local
+
+# Temporary files
+.angular/cache/
+tmp/
