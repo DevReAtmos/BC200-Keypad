@@ -1,2 +1,4 @@
 node_modules
-/dist.zip
+dist.zip
+.angular/cache/
+dist
