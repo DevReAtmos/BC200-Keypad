@@ -1,0 +1,104 @@
+
+<div class="my-container">
+    <div class="row">
+        <div class="col-2">
+            <div class="list-group list-group-flush border-bottom scrollarea">
+              <a class="list-group-item list-group-item-action py-3 lh-sm" routerLink="machine-data" routerLinkActive="active" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <strong class="mb-1">Machine Data</strong>
+                </div>
+              </a>
+              
+
+              
+                <a class="list-group-item list-group-item-action py-3 lh-sm bg-danger" (click)="logout()" routerLinkActive="active" aria-current="true">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                      <strong class="mb-1" style="color: white;">Logout</strong>
+                    </div>
+                </a>
+
+              </div>
+        </div>
+        <div class="col">
+          <div class="container">
+            <div class="row">
+                <div class="col box" [ngClass]="{'green-box': !shutterStatus, 'red-box': shutterStatus}" id="box1">
+                  <h3>Shutter Detection Status</h3>
+                  <br>
+                  <ng-container *ngIf="shutterStatus; else noShutterDetected">
+                    <p>Shutter Detected</p>
+                </ng-container>
+                
+                <ng-template #noShutterDetected>
+                    <p>No Shutter Detected</p>
+                </ng-template>
+                  <!-- <p>{{ shutterStatus ? 'Shutter Detected' : 'No Shutter Detected' }}</p> -->
+                </div>
+                <div class="col box" [ngClass]="{'green-box': !binFullStatus, 'red-box': binFullStatus}" id="box2">
+                  <h3>Bin Full Status</h3>
+                  <br>
+                  <ng-container *ngIf="binFullStatus; else binNotFull">
+                    <p>Bin is Full</p>
+                </ng-container>
+                
+                <ng-template #binNotFull>
+                    <p>Bin is Empty</p>
+                </ng-template>
+                  <!-- <p>{{ binFullStatus ? 'Bin is Full' : 'Bin is Empty' }}</p> -->
+                </div>
+                <div class="col box" [ngClass]="{'green-box': !countStatus, 'red-box': countStatus}" id="box3">
+                  <h3>Count Detection Status</h3>
+                  <br>
+                  <ng-container *ngIf="countStatus; else noBottleCounted">
+                    <p>Bottle Counted</p>
+                </ng-container>
+                
+                <ng-template #noBottleCounted>
+                    <p>No Bottle Counted</p>
+                </ng-template>
+                  <!-- <p>{{ countStatus ? 'Bottle Counted' : 'No Bottle Counted' }}</p> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col box" ngClass="green-box"   id="box4">
+                  <h3>Crushed Bottle Count</h3>
+                  <br>
+                 <h4>{{bottle_sum}}</h4>
+                 
+                </div>
+                <div class="col box" id="box5">col5</div>
+            </div>
+        </div>
+        
+          <!-- <div class="container">
+            <div class="col">
+            <div class="row">
+              <div class="col">
+                <h1>col1</h1>
+              </div>
+              <div class="col">
+                <h1>col2</h1>
+              </div>
+              <div class="col">
+                <h1>col3</h1>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col">
+                <h1>col4</h1>
+              </div>
+
+              <div class="col">
+                <h1>col5</h1>
+              </div>
+              
+            </div>
+          </div>
+          </div> -->
+            <!-- <router-outlet>
+
+            </router-outlet> -->
+        </div>
+    </div>
+</div>
