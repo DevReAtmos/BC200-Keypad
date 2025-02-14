@@ -18,7 +18,7 @@ export class RelayService {
       "trigger": "on"
     });
   }
-+
+
   turnOffRelay(){
     console.log("trigger off");
     return this.http.post('http://test2024:5000/trigger-crusher', {
